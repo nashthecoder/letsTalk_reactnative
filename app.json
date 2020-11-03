@@ -27,6 +27,8 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "description": "A reproductive health information, service and community application.",
+    "githubUrl": "https://github.com/nashthecoder/letsTalk_reactnative.git"
   }
 }
