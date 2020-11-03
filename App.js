@@ -1,13 +1,17 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, Image, SafeAreaView } from 'react-native';
+
+//SafeAreaView render content within the safe area boundaries of a device //
+//Image component allows you to render images on the app //
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Hello React Native</Text>
+    <SafeAreaView style={styles.container}>
+      <Text>Welcome</Text>
+      <Image source={require('./assets/lets_talk_logo.png')} />
       <StatusBar style="auto" />
-    </View>
+    </SafeAreaView>
   );
 }
 
@@ -15,7 +19,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#fff',
-    alignItems: 'center',
     justifyContent: 'center',
+    alignItems: 'center',
   },
 });
