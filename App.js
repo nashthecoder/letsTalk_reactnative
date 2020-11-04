@@ -8,7 +8,8 @@ import {
   SafeAreaView, 
   Alert, 
   Button, 
-  TextInput } 
+  TextInput,
+  TouchableOpacity } 
   from 'react-native';
 // import { useDimensions } from '@react-native-community/hooks';
 //SafeAreaView render content within the safe area boundaries of a device in iOS , ise Platform for Android 
@@ -29,16 +30,18 @@ export default function App() {
         style={styles.input}
         placeholder='Password'
          />
-      
-      <Button 
-        title ='Browsing?'
-        onPress={() =>
-        Alert.alert('Hey', 'Want to know more?', [
-            {text: 'Yes'},
-            {text: 'No'},
-          ])
-        }
-        />
+      <View style={styles.btnContainer}>
+        <TouchableOpacity
+          style={styles.userBtn}
+        >
+        <Text style={styles.btnText}>Login</Text>
+        </TouchableOpacity>
+        <TouchableOpacity
+          style={styles.userBtn}
+        >
+        <Text style={styles.btnText}>Create New Account</Text>
+        </TouchableOpacity>
+      </View>
       <StatusBar style="auto" />
     </SafeAreaView>
   );
@@ -47,7 +50,7 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#E8F3F1',
+    backgroundColor: '#ffffff',
     justifyContent: 'center',
     alignItems: 'center',
   },
@@ -55,5 +58,35 @@ const styles = StyleSheet.create({
    color: 'black',
    fontWeight: '600',
    fontSize: 20,
- }
+ },
+
+ input: {
+   width: '90%',
+   backgroundColor: '#E8F3F1',
+   borderColor: '#4CCCAC',
+   borderRadius: 8,
+   padding: 15,
+   marginBottom: 10,
+   marginTop: 10,
+ },
+
+ btnContainer: {
+
+ },
+
+ userBtn: {
+   width: '90%',
+   padding: 15,
+   backgroundColor: '#B80072',
+   borderRadius: 100,
+   marginBottom: 40,
+   marginTop: 10,
+ },
+
+  btnText: {
+    color: '#ffffff',
+    fontWeight: '600',
+    fontSize: 16,
+    alignItems: 'center',
+  }
 });
