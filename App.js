@@ -1,5 +1,6 @@
 import 'react-native-gesture-handler';
 import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { 
@@ -19,14 +20,12 @@ import {
 //Image component allows you to render images on the app //
 
 
-export default function App() {
+function LoginScreen({ navigation }) {
   return (
-      <NavigationContainer>
         <SafeAreaView style={styles.container}>
           <Image source={require('./assets/lets_talk_logo.png')} style={{width: '30%', height:'20%'}} />
-          <Text style={styles.login}> Login </Text>
           <TextInput 
-            style={styles.input}hhh
+            style={styles.input}
             placeholder='Username'
             />
           <TextInput 
@@ -37,7 +36,7 @@ export default function App() {
           <View style={styles.btnContainer}>
             <TouchableOpacity
               style={styles.userBtn}
-              onPress={() => alert('Login works')}
+              onPress={() => navigation.navigate('Content')}
             >
             <Text style={styles.btnText}>Login</Text>
             </TouchableOpacity>
@@ -49,8 +48,35 @@ export default function App() {
             </TouchableOpacity>
           </View>
           <StatusBar style="auto" />
-        </SafeAreaView>
-      </NavigationContainer>    
+        </SafeAreaView>  
+  );
+}
+
+function ContentScreen({ navigation }) {
+  return (
+    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+      <Text>Content Screen</Text>
+      <Button
+        title="Go to Login"
+        onPress={() => navigation.push('Details')}
+      />
+      <Button title="Go to Home" onPress={() => navigation.navigate('Home')} />
+      <Button title="Go back" onPress={() => navigation.goBack()} />
+    </View>
+
+  );
+}
+
+const Stack = createStackNavigator();
+
+function App() {
+  return (
+    <NavigationContainer>
+      <Stack.Navigator initialRouteName="Home">
+        <Stack.Screen name="Login" component={LoginScreen} />
+        <Stack.Screen name="Content" component={ContentScreen} />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 }
 
@@ -61,39 +87,38 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
   },
- login: {
-   color: 'black',
-   fontWeight: '600',
-   fontSize: 20,
- },
-
- input: {
-   width: '90%',
-   backgroundColor: '#E8F3F1',
-   borderColor: '#4CCCAC',
-   borderRadius: 8,
-   padding: 15,
-   marginBottom: 10,
-   marginTop: 10,
- },
-
- btnContainer: {
-   flexDirection: 'row',
-  justifyContent: 'space-between',
-   width: '90%',
- },
-
- userBtn: {
-   width: '45%',
-   padding: 15,
-   backgroundColor: '#B80072',
-   borderRadius: 100,
- },
-
+  login: {
+    color: 'black',
+    fontWeight: '600',
+    fontSize: 20,
+  },
+  input: {
+    width: '90%',
+    backgroundColor: '#E8F3F1',
+    borderColor: '#4CCCAC',
+    borderRadius: 8,
+    padding: 15,
+    marginBottom: 10,
+    marginTop: 10,
+  },
+  btnContainer: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    width: '90%',
+  },
+  userBtn: {
+    width: '45%',
+    padding: 15,
+    backgroundColor: '#B80072',
+    borderRadius: 100,
+  },
   btnText: {
     color: '#ffffff',
     fontWeight: '600',
     fontSize: 16,
     textAlign: 'center',
   }
-});
+})
+
+export default App;
+
