@@ -39,7 +39,7 @@ export default function App() {
         <TouchableOpacity
           style={styles.userBtn}
         >
-        <Text style={styles.btnText}>Create New Account</Text>
+        <Text style={styles.btnText}>Signup</Text>
         </TouchableOpacity>
       </View>
       <StatusBar style="auto" />
@@ -71,22 +71,22 @@ const styles = StyleSheet.create({
  },
 
  btnContainer: {
-
+   flexDirection: 'row',
+  justifyContent: 'space-between',
+   width: '90%',
  },
 
  userBtn: {
-   width: '90%',
+   width: '45%',
    padding: 15,
    backgroundColor: '#B80072',
    borderRadius: 100,
-   marginBottom: 40,
-   marginTop: 10,
  },
 
   btnText: {
     color: '#ffffff',
     fontWeight: '600',
     fontSize: 16,
-    alignItems: 'center',
+    textAlign: 'center',
   }
 });
