@@ -20,24 +20,27 @@ import {
 export default function App() {
   return (
     <SafeAreaView style={styles.container}>
-      <Image source={require('./assets/lets_talk_logo.png')} />
+      <Image source={require('./assets/lets_talk_logo.png')} style={{width: '30%', height:'20%'}} />
       <Text style={styles.login}> Login </Text>
       <TextInput 
-        style={styles.input}
+        style={styles.input}hhh
         placeholder='Username'
          />
       <TextInput 
         style={styles.input}
         placeholder='Password'
+        secureTextEntry
          />
       <View style={styles.btnContainer}>
         <TouchableOpacity
           style={styles.userBtn}
+          onPress={() => alert('Login works')}
         >
         <Text style={styles.btnText}>Login</Text>
         </TouchableOpacity>
         <TouchableOpacity
           style={styles.userBtn}
+          onPress={() => alert('Signup works')}
         >
         <Text style={styles.btnText}>Signup</Text>
         </TouchableOpacity>
