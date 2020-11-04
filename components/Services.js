@@ -3,10 +3,10 @@ import { View, Text } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 
-function ContentScreen() {
+function ServicesScreen() {
   return (
     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-      <Text>Content Screen</Text>
+      <Text>Services Screen</Text>
     </View>
   );
 }
@@ -25,13 +25,13 @@ function App() {
         }}
       >
         <Stack.Screen
-          name="Content"
-          component={ContentScreen}
-          options={{ title: 'My home' }}
+          name="Services"
+          component={ServicesScreen}
+          options={{ title: 'Find servics' }}
         />
       </Stack.Navigator>
     </NavigationContainer>
   );
 }
 
-export default Content;
+export default Services;

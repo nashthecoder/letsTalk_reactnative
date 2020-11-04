@@ -54,14 +54,8 @@ function LoginScreen({ navigation }) {
 
 function ContentScreen({ navigation }) {
   return (
-    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-      <Text>Content Screen</Text>
-      <Button
-        title="Go to Login"
-        onPress={() => navigation.push('Details')}
-      />
-      <Button title="Go to Home" onPress={() => navigation.navigate('Home')} />
-      <Button title="Go back" onPress={() => navigation.goBack()} />
+    <View style={{ flex: 1 }}>
+      <Text>Content Here</Text>
     </View>
 
   );
@@ -74,7 +68,7 @@ function App() {
     <NavigationContainer>
       <Stack.Navigator initialRouteName="Home">
         <Stack.Screen name="Login" component={LoginScreen} />
-        <Stack.Screen name="Content" component={ContentScreen} />
+        <Stack.Screen name="Content" component={ContentScreen} /> 
       </Stack.Navigator>
     </NavigationContainer>
   );
