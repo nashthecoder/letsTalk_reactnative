@@ -1,40 +1,50 @@
 import * as React from 'react';
-import { View, Text } from 'react-native';
-import { NavigationContainer } from '@react-navigation/native';
-import { createStackNavigator } from '@react-navigation/stack';
-import Services from './Services';
+import { View, Text, Button, TouchableOpacityBase } from 'react-native';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Chat from './Chat';
 import Profile from './Profile';
+import { 
+  StyleSheet,
+  TouchableOpacity
+}
+from 'react-native';
 
 function ServicesScreen() {
   return (
-    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-      <Text>Services Screen</Text>
+    <View style={styles.container}>
+      <Text>Put content here...</Text>
+        <View style={styles.navContainer}>
+        </View>
     </View>
   );
 }
 
-const Stack = createStackNavigator();
+const Tab = createBottomTabNavigator();
 
-function App() {
+function MyTabs() {
   return (
-    <NavigationContainer>
-      <Stack.Navigator
-        screenOptions={{
-          headerStyle: {
-            backgroundColor: '#f4511e',
-          },
-          headerTintColor: '#fff',
-        }}
-      >
-        <Stack.Screen
-          name="Services"
-          component={ServicesScreen}
-          options={{ title: 'Find servics' }}
-        />
-      </Stack.Navigator>
-    </NavigationContainer>
+    <View style={styles.container}>
+      <Tab.Navigator style={styles.tabContainer}>
+        <Tab.Screen name="Find" component={ServicesScreen} options={{ tabBarLabel: 'Find'}} />
+        <Tab.Screen name="Ask" component={ChatScreen} options={{ tabBarLabel: 'Ask'}} />
+        <Tab.Screen name="Share" component={ProfileScreen} options={{ tabBarLabel: 'Share'}} />
+      </Tab.Navigator>
+    </View>
   );
 }
 
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+  },
+  tabContainer: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    width: '90%',
+    padding: 15,
+    backgroundColor: '#B80072',
+    alignSelf: 'center',
+   },
+
+});
 export default ServicesScreen;
