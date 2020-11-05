@@ -2,11 +2,13 @@ import 'react-native-gesture-handler';
 import { NavigationContainer } from '@react-navigation/native';
 import { StatusBar } from 'expo-status-bar';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import Login from './components/Login';
 import React from 'react';
 import { 
   StyleSheet, 
   Text, 
   View, 
+  Button,
   SafeAreaView, 
   TouchableOpacity } 
   from 'react-native';
@@ -16,41 +18,41 @@ import {
 //Image component allows you to render images on the app //
 
 
-function HomeScreen() {
+function HomeScreen({ navigation }) {
   return (
-        <SafeAreaView style={styles.container}>
-          <View>
-            <Text>Content</Text>
-          </View>
-          <StatusBar style="auto" />
-        </SafeAreaView>  
+      <SafeAreaView style={styles.container}>
+        <Text>Content</Text>
+        <StatusBar style="auto" />
+      </SafeAreaView>
+
+
   );
 }
 
 function LoginScreen() {
   return (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+    <View style={{ flex: 1,}}>
       <Text>Login</Text>
     </View>
   );
 }
 function ServicesScreen() {
   return (
-    <View style={{ flex: 1,justifyContent: 'center', alignItems: 'center' }}>
+    <View style={{ flex: 1,}}>
       <Text>Find</Text>
     </View>
   );
 }
 function ChatScreen() {
   return (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+    <View style={{ flex: 1,}}>
       <Text>Ask</Text>
     </View>
   );
 }
 function ProfileScreen() {
   return (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+    <View style={{ flex: 1,}}>
       <Text>Profile</Text>
     </View>
   );
@@ -112,9 +114,16 @@ const Tab = createBottomTabNavigator();
 
 function App() {
   return (
-    <NavigationContainer>
+    <NavigationContainer style={styles.navContainer}>
+        <View>
+            <TouchableOpacity style={styles.loginLink}
+            onPress={() => navigation.navigate('Login')} 
+            >
+              <Text>Back to Login</Text>
+            </TouchableOpacity>
+        </View>
       <Tab.Navigator tabBar={props => <MyTabBar {...props} />}>
-        <Tab.Screen name="Login" component={LoginScreen} />
+        <Tab.Screen name="Home" component={HomeScreen} />
         <Tab.Screen name="Services" component={ServicesScreen} />
         <Tab.Screen name="Ask" component={ChatScreen} />
         <Tab.Screen name="Profile" component={ProfileScreen} />
@@ -129,37 +138,13 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#ffffff',
   },
-  login: {
+
+  loginLink: {
+    paddingTop: '10%',
     color: 'black',
     fontWeight: '600',
     fontSize: 20,
   },
-  input: {
-    width: '90%',
-    backgroundColor: '#E8F3F1',
-    borderColor: '#4CCCAC',
-    borderRadius: 8,
-    padding: 15,
-    marginBottom: 10,
-    marginTop: 10,
-  },
-  btnContainer: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    width: '90%',
-  },
-  userBtn: {
-    width: '45%',
-    padding: 15,
-    backgroundColor: '#B80072',
-    borderRadius: 100,
-  },
-  btnText: {
-    color: '#ffffff',
-    fontWeight: '600',
-    fontSize: 16,
-    textAlign: 'center',
-  }
 })
 
 export default App;

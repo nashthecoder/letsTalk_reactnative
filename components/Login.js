@@ -2,7 +2,6 @@ import 'react-native-gesture-handler';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { StatusBar } from 'expo-status-bar';
-import Content from './components/Content';
 import React from 'react';
 import { 
   StyleSheet, 
@@ -10,8 +9,6 @@ import {
   View, 
   Image, 
   SafeAreaView, 
-  Alert, 
-  Button, 
   TextInput,
   TouchableOpacity } 
   from 'react-native';
@@ -21,10 +18,12 @@ import {
 //Image component allows you to render images on the app //
 
 
-function LoginScreen({ navigation }) {
+function LoginScreen() {
   return (
-        <SafeAreaView style={styles.container}>
-          <Image source={require('./assets/lets_talk_logo.png')} style={{width: '30%', height:'20%'}} />
+    
+    <NavigationContainer>
+      <SafeAreaView style={styles.container}>
+          <Image source={require('../assets/lets_talk_logo.png')} style={{width: '30%', height:'20%'}} />
           <TextInput 
             style={styles.input}
             placeholder='Username'
@@ -50,28 +49,7 @@ function LoginScreen({ navigation }) {
           </View>
           <StatusBar style="auto" />
         </SafeAreaView>  
-  );
-}
-
-function ContentScreen({ navigation }) {
-  return (
-    <View style={{ flex: 1 }}>
-      <Content />
-    </View>
-  );
-}
-
-
-const Stack = createStackNavigator();
-
-function App() {
-  return (
-    <NavigationContainer>
-      <Stack.Navigator initialRouteName="Home">
-        <Stack.Screen name="Login" component={LoginScreen} />
-        <Stack.Screen name="Content" component={ContentScreen} /> 
-      </Stack.Navigator>
-    </NavigationContainer>
+    </NavigationContainer>   
   );
 }
 
@@ -115,5 +93,5 @@ const styles = StyleSheet.create({
   }
 })
 
-export default App;
+export default LoginScreen;
 
