@@ -34,4 +34,4 @@ function App() {
   );
 }
 
-export default Chat;
+export default ChatScreen;

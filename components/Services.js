@@ -2,6 +2,9 @@ import * as React from 'react';
 import { View, Text } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
+import Services from './Services';
+import Chat from './Chat';
+import Profile from './Profile';
 
 function ServicesScreen() {
   return (
@@ -34,4 +37,4 @@ function App() {
   );
 }
 
-export default Services;
+export default ServicesScreen;

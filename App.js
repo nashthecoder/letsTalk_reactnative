@@ -2,6 +2,7 @@ import 'react-native-gesture-handler';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { StatusBar } from 'expo-status-bar';
+import Content from './components/Content';
 import React from 'react';
 import { 
   StyleSheet, 
@@ -55,11 +56,11 @@ function LoginScreen({ navigation }) {
 function ContentScreen({ navigation }) {
   return (
     <View style={{ flex: 1 }}>
-      <Text>Content Here</Text>
+      <Content />
     </View>
-
   );
 }
+
 
 const Stack = createStackNavigator();
 

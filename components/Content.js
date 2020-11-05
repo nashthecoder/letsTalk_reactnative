@@ -2,6 +2,9 @@ import * as React from 'react';
 import { View, Text } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
+import Services from './Services';
+import Chat from './Chat';
+import Profile from './Profile';
 
 function ContentScreen() {
   return (
@@ -27,11 +30,11 @@ function App() {
         <Stack.Screen
           name="Content"
           component={ContentScreen}
-          options={{ title: 'My home' }}
+          options={{ title: 'Content' }}
         />
       </Stack.Navigator>
     </NavigationContainer>
   );
 }
 
-export default Content;
+export default ContentScreen;

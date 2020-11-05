@@ -34,4 +34,4 @@ function App() {
   );
 }
 
-export default Profile;
+export default ProfileScreen;
