@@ -71,12 +71,12 @@ const styles = StyleSheet.create({
   },
 
   input: {
-    width: 300,
+    width: 250,
     backgroundColor: '#E8F3F1',
     borderColor: '#4CCCAC',
     borderRadius: 8,
     padding: 15,
-    marginBottom: 20,
+    marginBottom: 10,
     marginTop: 10,
     alignSelf: 'center'
   },
@@ -85,8 +85,6 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     width: '90%',
-    marginLeft: 25,
-    marginTop: 25
   },
 
   userBtn: {

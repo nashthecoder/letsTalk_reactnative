@@ -85,8 +85,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     width: '90%',
-    marginLeft: 25,
-    marginTop: 25
+    alignSelf: 'center'
   },
 
   userBtn: {
@@ -94,6 +93,7 @@ const styles = StyleSheet.create({
     padding: 15,
     backgroundColor: '#B80072',
     borderRadius: 100,
+    alignSelf: 'center'
   },
   
   btnText: {
