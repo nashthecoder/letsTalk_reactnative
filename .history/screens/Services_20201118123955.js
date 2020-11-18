@@ -1,8 +1,8 @@
 import * as React from 'react';
 import { View, Text, Button, TouchableOpacityBase } from 'react-native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import Chat from './chat';
-import Profile from './profile';
+import Chat from './Chat';
+import Profile from './Profile';
 import { 
   StyleSheet,
   TouchableOpacity
