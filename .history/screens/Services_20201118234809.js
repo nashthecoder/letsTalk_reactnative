@@ -1,5 +1,4 @@
 
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import React from 'react';
 import { View, Text, } from 'react-native';
 
@@ -13,7 +12,6 @@ export default function Services() {
         <Text>Ask</Text>
         <Text>Share</Text>
       </View>
-      
     </View>
   );
 }/* import * as React from 'react';

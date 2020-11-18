@@ -2,15 +2,20 @@
 import React from 'react';
 import { 
   View, 
-  Text,
-  StyleSheet
-  } 
+  Text, 
+  StyleSheet,
+  TouchableOpacity  } 
   from 'react-native';
 
-export default function Home() {
+export default function Home({ navigation }) {
+
+  const pressHandler = () => {
+    navigation.push('Find')
+  }
+  
   return (
     <View style={styles.btnContainer}>
-      <Text>Content</Text>
+        <Text style={styles.screen} onPress={pressHandler}>Find</Text>
     </View>
       
   )

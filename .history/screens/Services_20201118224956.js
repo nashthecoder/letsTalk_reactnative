@@ -1,19 +1,18 @@
 
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import React from 'react';
 import { View, Text, } from 'react-native';
-
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
 export default function Services() {
-  
+  const Tab = createBottomTabNavigator();
   return (
     <View>
       <View>
-        <Text>Find</Text>
+        <Text>Home</Text>
+        <Text>Services</Text>
         <Text>Ask</Text>
-        <Text>Share</Text>
+        <Text>Profile</Text>
       </View>
-      
     </View>
   );
 }/* import * as React from 'react';

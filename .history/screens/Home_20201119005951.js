@@ -6,6 +6,7 @@ import {
   StyleSheet
   } 
   from 'react-native';
+  import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
 export default function Home() {
   return (
@@ -14,6 +15,17 @@ export default function Home() {
     </View>
       
   )
+}
+
+const Tab = createBottomTabNavigator();
+
+export function Tabs() {
+  return (
+    <Tab.Navigator>
+      <Tab.Screen name="Home" component={HomeScreen} />
+      <Tab.Screen name="Settings" component={SettingsScreen} />
+    </Tab.Navigator>
+  );
 }
 
 const styles = StyleSheet.create({

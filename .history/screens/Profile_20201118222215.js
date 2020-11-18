@@ -3,15 +3,11 @@ import React from 'react';
 import { View, Text, } from 'react-native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
-export default function Chat() {
+
+export default function Profile() {
   return (
     <View>
-        <View>
-        <Text>File</Text>
-        <Text>Picture</Text>
-        <Text>Audio</Text>
-        <Text>Video</Text>
-      </View>
+      <Text>Profile</Text>
     </View>
   );
 }
@@ -20,10 +16,10 @@ import { View, Text } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 
-function ChatScreen() {
+function ProfileScreen() {
   return (
     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-      <Text>Chat Screen</Text>
+      <Text>Profile Screen</Text>
     </View>
   );
 }
@@ -42,13 +38,13 @@ function App() {
         }}
       >
         <Stack.Screen
-          name="Chat"
-          component={ChatScreen}
-          options={{ title: 'Ask Me' }}
+          name="Profile"
+          component={ProfileScreen}
+          options={{ title: 'My profile' }}
         />
       </Stack.Navigator>
     </NavigationContainer>
   );
 }
 
-export default ChatScreen; */
+export default ProfileScreen; */

@@ -1,19 +1,19 @@
 
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import React from 'react';
 import { View, Text, } from 'react-native';
-
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
 export default function Services() {
-  
+  const Tab = createBottomTabNavigator();
   return (
     <View>
-      <View>
-        <Text>Find</Text>
-        <Text>Ask</Text>
-        <Text>Share</Text>
+      <View style={styles.container}>
+      <Tab.Navigator style={styles.tabContainer}>
+        <Tab.Screen name="Find" component={ServicesScreen} options={{ tabBarLabel: 'Find'}} />
+        <Tab.Screen name="Ask" component={ChatScreen} options={{ tabBarLabel: 'Ask'}} />
+        <Tab.Screen name="Share" component={ProfileScreen} options={{ tabBarLabel: 'Share'}} />
+      </Tab.Navigator>
       </View>
-      
     </View>
   );
 }/* import * as React from 'react';

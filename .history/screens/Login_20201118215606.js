@@ -22,11 +22,8 @@ export default function Login({navigation}) {
 
   return (
     <SafeAreaView style={styles.container}>
-            <View>
-              <Image 
-              source={require('../assets/lets_talk_logo.png')} 
-              style={{ width: '30%', height: '20%' }} 
-              />
+        <View>
+          <Image source={require('../assets/lets_talk_logo.png')} style={{width: '30%', height:'20%'}} />
               <TextInput 
                 style={styles.input}
                 placeholder='Username'
@@ -63,13 +60,11 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
   },
-
   login: {
     color: 'black',
     fontWeight: '600',
     fontSize: 20,
   },
-
   input: {
     width: '90%',
     backgroundColor: '#E8F3F1',
@@ -79,20 +74,17 @@ const styles = StyleSheet.create({
     marginBottom: 10,
     marginTop: 10,
   },
-
   btnContainer: {
     flexDirection: 'row',
     justifyContent: 'space-between',
     width: '90%',
   },
-
   userBtn: {
     width: '45%',
     padding: 15,
     backgroundColor: '#B80072',
     borderRadius: 100,
   },
-  
   btnText: {
     color: '#ffffff',
     fontWeight: '600',

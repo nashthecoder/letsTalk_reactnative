@@ -1,19 +1,12 @@
 
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import React from 'react';
 import { View, Text, } from 'react-native';
-
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
 export default function Services() {
-  
   return (
     <View>
-      <View>
-        <Text>Find</Text>
-        <Text>Ask</Text>
-        <Text>Share</Text>
-      </View>
-      
+      <Text>Services</Text>
     </View>
   );
 }/* import * as React from 'react';
@@ -37,7 +30,7 @@ function ServicesScreen() {
   );
 }
 
-
+const Tab = createBottomTabNavigator();
 
 function MyTabs() {
   return (

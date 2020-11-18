@@ -13,7 +13,7 @@ export default function Services() {
         <Text>Ask</Text>
         <Text>Share</Text>
       </View>
-      
+      < createBottomTabNavigator />
     </View>
   );
 }/* import * as React from 'react';

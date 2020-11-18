@@ -6,12 +6,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 export default function Chat() {
   return (
     <View>
-        <View>
-        <Text>File</Text>
-        <Text>Picture</Text>
-        <Text>Audio</Text>
-        <Text>Video</Text>
-      </View>
+      <Text>Chat</Text>
     </View>
   );
 }
