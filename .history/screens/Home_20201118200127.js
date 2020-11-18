@@ -1,15 +1,3 @@
-
-import React from 'react';
-import { View, Text, } from 'react-native';
-
-export default function Home() {
-  return (
-    <View>
-      <Text>Home</Text>
-    </View>
-  );
-}
-
 /* import 'react-native-gesture-handler';
 import { NavigationContainer } from '@react-navigation/native';
 import { StatusBar } from 'expo-status-bar';
@@ -143,4 +131,4 @@ const Tab = createBottomTabNavigator();
     </NavigationContainer>
   );
 } */
- 
+ */

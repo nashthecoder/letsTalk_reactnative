@@ -19,7 +19,7 @@ export default function Login({navigation}) {
   const pressHandler = () => {
     navigation.navigate('Home')
   }
-
+  
   return (
     <SafeAreaView style={styles.container}>
         <View>
@@ -36,7 +36,7 @@ export default function Login({navigation}) {
               <View style={styles.btnContainer}>
                 <TouchableOpacity
                   style={styles.userBtn}
-                  onPress={pressHandler}
+                  onPress={}
                 >
                 <Text style={styles.btnText}>Login</Text>
                 </TouchableOpacity>

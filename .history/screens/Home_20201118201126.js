@@ -143,4 +143,4 @@ const Tab = createBottomTabNavigator();
     </NavigationContainer>
   );
 } */
- 
+ */

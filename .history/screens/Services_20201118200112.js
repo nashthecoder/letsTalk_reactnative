@@ -1,14 +1,4 @@
-
-import React from 'react';
-import { View, Text, } from 'react-native';
-
-export default function Services() {
-  return (
-    <View>
-      <Text>Services</Text>
-    </View>
-  );
-}/* import * as React from 'react';
+/* import * as React from 'react';
 import { View, Text, Button, TouchableOpacityBase } from 'react-native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Chat from './chat';

@@ -13,13 +13,7 @@ import 'react-native-gesture-handler';
 import { StatusBar } from 'expo-status-bar';
 
 
-
-export default function Login({navigation}) { 
-
-  const pressHandler = () => {
-    navigation.navigate('Home')
-  }
-
+export default function Login() {
   return (
     <SafeAreaView style={styles.container}>
         <View>
@@ -36,7 +30,7 @@ export default function Login({navigation}) {
               <View style={styles.btnContainer}>
                 <TouchableOpacity
                   style={styles.userBtn}
-                  onPress={pressHandler}
+                  onPress={() => navigation.navigate('Content')}
                 >
                 <Text style={styles.btnText}>Login</Text>
                 </TouchableOpacity>
