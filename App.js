@@ -2,7 +2,6 @@ import 'react-native-gesture-handler';
 import { NavigationContainer } from '@react-navigation/native';
 import { StatusBar } from 'expo-status-bar';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import Login from './components/Login';
 import React from 'react';
 import { 
   StyleSheet, 
@@ -20,6 +19,7 @@ import {
 
 function HomeScreen({ navigation }) {
   return (
+    
       <SafeAreaView style={styles.container}>
         <Text>Content</Text>
         <StatusBar style="auto" />
