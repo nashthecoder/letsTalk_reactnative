@@ -56,6 +56,10 @@ function ProfileScreen({ navigation }) {
   return (
     <View>
       <Text>Profile Screen</Text>
+      <Button
+        title="Home"
+        onPress={() => navigation.navigate('Content')}
+      />
     </View>
   );
 }

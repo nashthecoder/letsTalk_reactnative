@@ -33,6 +33,7 @@ function ServicesScreen({ navigation }) {
         onPress={() => navigation.navigate('Find')}
       />
       <Button
+      <Button
         title="Ask"
         onPress={() => navigation.navigate('Ask')}
       />
@@ -48,6 +49,14 @@ function ChatScreen({ navigation }) {
   return (
     <View>
       <Text>Ask Screen</Text>
+      <Button
+        title="Find"
+        onPress={() => navigation.navigate('Find')}
+      />
+      <Button
+        title="Share"
+        onPress={() => navigation.navigate('Share')}
+      />
     </View>
   );
 }
@@ -56,6 +65,10 @@ function ProfileScreen({ navigation }) {
   return (
     <View>
       <Text>Profile Screen</Text>
+      <Button
+        title="Home"
+        onPress={() => navigation.navigate('Content')}
+      />
     </View>
   );
 }
