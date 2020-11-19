@@ -1,8 +1,8 @@
 import { createStackNavigator } from 'react-navigation-stack';
-import React from 'react';
 import Header from '../shared/header';
+import Home from '../screens/home';
 import Chat from "../screens/chat";
-
+import Profile from "../screens/profile";
 
 const screens = {
     Chat: {

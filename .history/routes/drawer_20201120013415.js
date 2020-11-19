@@ -13,7 +13,7 @@ const RootDrawerNavigator = createDrawerNavigator({
     screen: HomeStack,
   },
   Ask: {
-    screen: ChatStack,
+    screen: CskStack,
   },
   Profile: {
     screen: ProfileStack,

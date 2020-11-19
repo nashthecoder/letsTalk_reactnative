@@ -1,20 +1,30 @@
 import { createStackNavigator } from 'react-navigation-stack';
-import React from 'react';
 import Header from '../shared/header';
+import Home from '../screens/home';
 import Chat from "../screens/chat";
+import Profile from "../screens/profile";
 
 
 const screens = {
-    Chat: {
-      screen: Chat,
-      navigationOptions: ({ navigation }) => {
-        return {
-          headerTitle: () => <Header navigation={navigation} />
+    Home: {
+        screen: Home,
+        navigationOptions: {
+            title: 'Content',
         }
-      },
     },
-  }
-
+    Chat: {
+        screen: Chat,
+        navigationOptions: {
+        title: 'Ask',
+        }
+    },
+    Profile: {
+        screen: Profile,
+        navigationOptions: {
+        title: 'Profile',
+        }
+    }
+};
 
 // home stack navigator screens
 const ChatStack = createStackNavigator(screens, {

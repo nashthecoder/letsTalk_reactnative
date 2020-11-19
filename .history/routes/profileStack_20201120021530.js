@@ -1,12 +1,11 @@
 import { createStackNavigator } from 'react-navigation-stack';
-import React from 'react';
 import Header from '../shared/header';
-import Chat from "../screens/chat";
+import Profile from "../screens/profile";
 
 
 const screens = {
-    Chat: {
-      screen: Chat,
+    Profile: {
+      screen: Profile,
       navigationOptions: ({ navigation }) => {
         return {
           headerTitle: () => <Header navigation={navigation} />
@@ -17,12 +16,11 @@ const screens = {
 
 
 // home stack navigator screens
-const ChatStack = createStackNavigator(screens, {
+const ProfileStack = createStackNavigator(screens, {
     defaultNavigationOptions: {
     headerTintColor: '#444',
     headerStyle: { backgroundColor: '#fff', height: 60 }
     }
 });
 
-export default ChatStack;
-
+export default ProfileStack;
