@@ -7,11 +7,11 @@ import {
   } 
   from 'react-native';
 
-
 export default function Home() {
   return (
     <View style={styles.btnContainer}>
-      <Text>Content testing</Text>
+      <Image source={logo} style={{ width: 305, height: 159 }} />
+      <Text>Content</Text>
     </View>
       
   )

@@ -7,11 +7,10 @@ import {
   } 
   from 'react-native';
 
-
 export default function Home() {
   return (
     <View style={styles.btnContainer}>
-      <Text>Content testing</Text>
+      <Text>Content</Text>
     </View>
       
   )

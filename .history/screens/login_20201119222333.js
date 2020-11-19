@@ -11,21 +11,23 @@ import {
   from 'react-native';
 import 'react-native-gesture-handler';
 import { StatusBar } from 'expo-status-bar';
-import logo from '../assets/logo.png'; 
-
+import logo from './assets/logo.png'; 
 
 
 
 export default function Login({navigation}) { 
-  
+
   const pressHandler = () => {
     navigation.navigate('Home')
   }
 
   return (
     <SafeAreaView style={styles.container}>
-      <Image source={logo} style={{ width: '30%', height: '20%' }} /> 
             <View>
+              <Image 
+              source={logo} 
+              style={{ width: '30%', height: '20%' }} 
+              />
               <TextInput 
                 style={styles.input}
                 placeholder='Email'
@@ -76,7 +78,7 @@ const styles = StyleSheet.create({
     borderRadius: 8,
     padding: 15,
     marginBottom: 20,
-    marginTop: 15,
+    marginTop: 10,
     alignSelf: 'center'
   },
 
