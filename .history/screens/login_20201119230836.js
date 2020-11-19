@@ -11,6 +11,7 @@ import {
   from 'react-native';
 import 'react-native-gesture-handler';
 import { StatusBar } from 'expo-status-bar';
+import { Keyboard, TouchableWithoutFeedback } from 'react-native';
 import logo from '../assets/logo.png'; 
 
 

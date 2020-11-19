@@ -13,14 +13,6 @@ function HomeScreen({ navigation }) {
         title="Find"
         onPress={() => navigation.navigate('Find')}
       />
-      <Button
-        title="Ask"
-        onPress={() => navigation.navigate('Ask')}
-      />
-      <Button
-        title="Share"
-        onPress={() => navigation.navigate('Share')}
-      />
     </View>
   );
 }
@@ -46,11 +38,7 @@ function ChatScreen({ navigation }) {
     <View>
       <Text>Ask Screen</Text>
       <Button
-        title="Find"
-        onPress={() => navigation.navigate('Find')}
-      />
-      <Button
-        title="Ask"
+        title="Now what?"
         onPress={() => navigation.navigate('Chat')}
       />
     </View>

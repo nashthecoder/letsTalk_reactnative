@@ -11,6 +11,7 @@ import {
   from 'react-native';
 import 'react-native-gesture-handler';
 import { StatusBar } from 'expo-status-bar';
+import { Keyboard, TouchableWithoutFeedback } from 'react-native';
 import logo from '../assets/logo.png'; 
 
 
@@ -20,14 +21,21 @@ export default function Login({navigation}) {
   
   const pressHandler = () => {
     navigation.navigate('Home')
-  }   
+  }
 
   return (
     <SafeAreaView style={styles.container}>
       <Image source={logo} style={{ width: '30%', height: '20%' }} /> 
             <View>
-              <TextInput style={styles.input} placeholder='Email'/>
-              <TextInput style={styles.input} placeholder='Password'secureTextEntry/>
+              <TextInput 
+                style={styles.input}
+                placeholder='Email'
+                />
+              <TextInput 
+                style={styles.input}
+                placeholder='Password'
+                secureTextEntry
+                />
               <View style={styles.btnContainer}>
                 <TouchableOpacity
                   style={styles.userBtn}
@@ -41,7 +49,7 @@ export default function Login({navigation}) {
                 >
                 <Text style={styles.btnText}>Signup</Text>
                 </TouchableOpacity>
-              </View>         
+              </View>
         </View>
       <StatusBar style="auto" />
     </SafeAreaView>

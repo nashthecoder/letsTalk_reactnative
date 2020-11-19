@@ -46,10 +46,6 @@ function ChatScreen({ navigation }) {
     <View>
       <Text>Ask Screen</Text>
       <Button
-        title="Find"
-        onPress={() => navigation.navigate('Find')}
-      />
-      <Button
         title="Ask"
         onPress={() => navigation.navigate('Chat')}
       />

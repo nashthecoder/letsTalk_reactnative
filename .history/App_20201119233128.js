@@ -1,6 +1,6 @@
 import 'react-native-gesture-handler';
 import React from 'react';
-import { Button, View, Text } from 'react-native';
+import Navigator from './routes/homeStack';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 
@@ -10,16 +10,8 @@ function HomeScreen({ navigation }) {
     <View>
       <Text>Content Screen</Text>
       <Button
-        title="Find"
-        onPress={() => navigation.navigate('Find')}
-      />
-      <Button
-        title="Ask"
-        onPress={() => navigation.navigate('Ask')}
-      />
-      <Button
-        title="Share"
-        onPress={() => navigation.navigate('Share')}
+        title="Now what?"
+        onPress={() => navigation.navigate('Home')}
       />
     </View>
   );
@@ -30,12 +22,8 @@ function ServicesScreen({ navigation }) {
     <View>
       <Text>Find Screen</Text>
       <Button
-        title="Ask"
-        onPress={() => navigation.navigate('Ask')}
-      />
-      <Button
-        title="Share"
-        onPress={() => navigation.navigate('Share')}
+        title="Now what?"
+        onPress={() => navigation.navigate('Services')}
       />
     </View>
   );
@@ -46,11 +34,7 @@ function ChatScreen({ navigation }) {
     <View>
       <Text>Ask Screen</Text>
       <Button
-        title="Find"
-        onPress={() => navigation.navigate('Find')}
-      />
-      <Button
-        title="Ask"
+        title="Now what?"
         onPress={() => navigation.navigate('Chat')}
       />
     </View>
